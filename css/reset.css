@@ -1,0 +1,25 @@
+*{ /* 定義整個瀏覽器 */
+    margin: 0; /* Box外框0 */
+    padding: 0; /* 文字外框0*/
+    box-sizing: border-box; /*  padding,border包含在box裡面*/
+}
+
+html, textarea ,a {
+    font-family: Arial, Helvetica, sans-serif; /* 字體定義*/
+    color: #2c3e50;
+}
+
+img{
+   display: block;  /* 圖片定義佔滿橫向版面，可自行定義box大小*/
+   width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 576px) { /*針對手機把字體改小*/
+    html {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,59 @@
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex; /*   水平排序    */
+    flex-wrap: wrap; /* 換行 */
+    margin-left: -1rem; /*  刪除padding左右的空白*/
+    margin-right: -1rem;
+
+}
+
+[class^="col-"] { /*    當clss是col-開頭的都包含*/
+    padding: 0 1rem; /* padding 縱軸佔0px 橫軸padding佔14px*/
+}
+
+.col-md-12 {
+    flex-basis: 100%;
+}
+
+.col-md-9 {
+    flex-basis: 75%; /* 總寬度100%(12欄)，分2欄所以各佔50%*/
+}
+
+
+.col-md-6 {
+    flex-basis: 50%; /* 總寬度100%(12欄)，分2欄所以各佔50%*/
+}
+
+.col-md-4{
+    flex-basis: 33.33%; /* 總寬度100%(12欄)，分3欄所以各佔33.33%*/
+}
+
+.col-md-3{
+    flex-basis: 25%; /* 總寬度100%(12欄)，分4欄所以各佔25%*/
+}
+
+
+@media only screen and (max-width: 576px) { /*針對手機*/
+    .container {
+        width: 90%;
+    }
+
+    [class^= "col-"] { /*    當clss是col-開頭的都包含*/
+        flex-basis: 100%; 
+        
+    }
+}
+
+/*  當最小值為577px，最大值為911px時寬度變成750*/
+@media only screen and (min-width: 577px) and (max-width: 991px) { /*針對ipad*/
+    .container {    
+        width: 750px;
+    }
+
+        
+}

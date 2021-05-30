@@ -1,0 +1,251 @@
+/* 8. Nav */
+body {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* margin-top: 10px; */
+}
+
+.row a {
+    color: rgb(49, 49, 49);
+    text-decoration: none;
+}
+
+.sm-icon {
+    width: 30px;
+}
+
+nav {
+    box-shadow: 0px 1px 8px 0px #b1b1b1;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-right: 1.5rem;
+}
+
+nav li:last-child {
+    margin-right: 0;
+    /* 刪除最右方的margin-right*/
+}
+
+/*last-of-type 和 last-child 功能類似，都是將最後一個的空間去除
+ last-child：僅能處理同樣類別的class
+ last-of-type：可將不同類別的標籤統一處理
+ */
+
+.bar {
+    background-color: #000;
+    width: 25px;
+    height: 1px;
+    margin: 6px 0;
+
+}
+
+.menu {
+    /* 在桌上版本時橫線消失*/
+    display: none;
+}
+
+@media only screen and (max-width: 576px) {
+
+    /* 設定手機版本時*/
+    nav ul {
+        display: none;
+        /*橫向文字設定在手機版本會消失*/
+        width: 100%;
+        flex-direction: column;
+        /*縱向排列*/
+    }
+
+    nav ul li {
+        margin-bottom: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .menu {
+        /* 僅在手機版本顯示menu的設定(即bar的class橫線)*/
+        display: block;
+    }
+
+}
+
+/* 7.Header*/
+
+header {
+    background: url("https://images.pexels.com/photos/374870/pexels-photo-374870.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260") no-repeat center/cover;
+    /*簡寫↑常態↓*/
+    background-size: cover;
+    /* 自動滿版，依瀏覽器自動調整 */
+    background-repeat: no-repeat;
+    /* 背景圖片不重複 */
+    background-position: center;
+    /* 背景圖片置中 */
+
+    /*background-color: rgba(49, 45, 75, 0.589); */
+    height: 600px;
+    color: #FFF;
+    position: relative;
+    /* 定義父資料*/
+}
+
+.header-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+header h1 {
+    font-style: 3rem;
+    /*48px*/
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 2px solid rgb(201, 201, 201);
+}
+
+header p {
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 576px) {
+
+    header {
+        height: 400px;
+    }
+
+    .header-container {
+        /*position: absolute; /* 定義子資料
+        top: 50%; /*從上往下50%
+        left: 50%; /*從左往右50%
+        transform: translate(-50%, -50%); /*padding內縮50%*/
+        width: 80%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+}
+
+
+/* Features*/
+
+.features p {
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8px;
+}
+
+.features-icon {
+    padding: 0.3rem;
+    border-radius: 10%;
+    /*  半徑 */
+    display: inline-block;
+}
+
+.pink {
+    background: pink;
+}
+
+.orange {
+    background: orange;
+}
+
+.blue {
+    background: rgb(100, 100, 177);
+}
+
+.green {
+    background: olivedrab;
+}
+
+/*6.Form*/
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    display: block;
+    padding: 0.5rem 0.5rem;
+    width: 100%;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.row {
+    width: 100%;
+}
+
+textarea {
+    height: 200px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+/* 4.Footer*/
+.box4 {
+    background-color: rgb(231, 173, 173);
+    height: 80px;
+}
+
+footer {
+    background-color: #2d4d6d;
+    color: #FFF;
+}
+
+footer h3 {
+    border-bottom: 2px solid #8f8f8f;
+}
+
+footer p {
+    line-height: 1.5;
+}
+
+footer ul {
+    /* 把list的●換成別的樣式 lower-greek*/
+    list-style: none;
+}
+
+/* 要在這邊設定抑或是在底下用class設定皆可，
+一般會選擇較整齊的方式 */
+footer li {
+    margin-bottom: 1rem;
+}
+
+.sm-icon {
+    width: 24px;
+}
+
+.md-icon {
+    width: 42px;
+}
+
+.copyright {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #41668b;
+    color: #d3d3d3;
+    text-align: center;
+    padding: 3px;
+
+}
